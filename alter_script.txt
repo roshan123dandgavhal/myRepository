@@ -1,0 +1,88 @@
+ALTER TABLE `tbl_software_parameter` ADD `fld_show_qr_code` VARCHAR( 10 ) NOT NULL AFTER `fld_get_signature` 
+
+//By Juned 28/09/2019
+ALTER TABLE `tbl_software_parameter` ADD `fld_credit_period_for_invoice` VARCHAR( 35 ) NOT NULL AFTER `fld_show_qr_code` 
+
+//By Juned 30/09/2019
+//Indexing
+ALTER TABLE `tbl_client_fuel_order_details` ADD INDEX ( `fld_order_id` ) 
+ALTER TABLE `tbl_client_fuel_filling_master` ADD INDEX ( `fld_order_id` ) 
+ALTER TABLE `tbl_client_fuel_filling_master` ADD INDEX ( `fld_transaction_id` ) 
+ALTER TABLE `tbl_client_fuel_filling_details` ADD INDEX ( `fld_filling_id` ) 
+
+//By Juned 30/09/2019
+//Indexing
+ALTER TABLE `tbl_admin` ADD INDEX ( `fld_designation_id` ) 
+ALTER TABLE `tbl_admin` ADD INDEX ( `fld_adm_name` ) 
+ALTER TABLE `tbl_bank_master` ADD INDEX ( `fld_bank_name` ) 
+ALTER TABLE `tbl_branch_master` ADD INDEX ( `fld_org_id` ) 
+ALTER TABLE `tbl_cash_memo_details` ADD INDEX ( `fld_item_id` ) 
+ALTER TABLE `tbl_category_master` ADD INDEX ( `fld_category_name` ) 
+ALTER TABLE `tbl_client_fuel_filling_master` ADD INDEX ( `fld_receipt_no` ) 
+ALTER TABLE `tbl_counter_master` ADD INDEX ( `fld_last_count` ) 
+ALTER TABLE `tbl_country_master` ADD INDEX ( `fld_country_name` ) 
+ALTER TABLE `tbl_currency_master` ADD INDEX ( `fld_currency_name` ) 
+ALTER TABLE `tbl_customer_credit_note` ADD INDEX ( `fld_invoice_id` ) 
+ALTER TABLE `tbl_customer_debit_note` ADD INDEX ( `fld_transport_id` ) 
+ALTER TABLE `tbl_customer_debit_note_tax_details` ADD INDEX ( `fld_amount` )
+ALTER TABLE `tbl_customer_generic_card` ADD INDEX ( `fld_cust_id` ) 
+ALTER TABLE `tbl_customer_payment` ADD INDEX ( `fld_paid_amt` ) 
+ALTER TABLE `tbl_customer_payment` ADD INDEX ( `fld_client_id` ) 
+ALTER TABLE `tbl_cust_contact_person_details` ADD INDEX ( `fld_customer_id` ) 
+ALTER TABLE `tbl_cust_contact_person_details` ADD INDEX ( `fld_contact_person_name` ) 
+ALTER TABLE `tbl_department_master` ADD INDEX ( `fld_department_name` ) 
+ALTER TABLE `tbl_designation_master` ADD INDEX ( `fld_designation_name` ) 
+ALTER TABLE `tbl_discount_slab_master` ADD INDEX ( `fld_cust_id` ) 
+ALTER TABLE `tbl_discount_slab_master` ADD INDEX ( `fld_item_id` ) 
+ALTER TABLE `tbl_discount_slab_master` ADD INDEX ( `fld_discount` ) 
+ALTER TABLE `tbl_finishmaterial_category_master` ADD INDEX ( `fld_finishmaterial_name` ) 
+ALTER TABLE `tbl_finish_material_rate_history` ADD INDEX ( `fld_finish_mat_id` ) 
+ALTER TABLE `tbl_group_master` ADD INDEX ( `fld_group_name` ) 
+ALTER TABLE `tbl_holiday_master` ADD INDEX ( `fld_holiday_name` ) 
+ALTER TABLE `tbl_invoice_details` ADD INDEX ( `fld_fuel_filling_id` ) 
+ALTER TABLE `tbl_invoice_details` ADD INDEX ( `fld_total` ) 
+ALTER TABLE `tbl_message_master` ADD INDEX ( `fld_send_frm_id` ) 
+ALTER TABLE `tbl_message_master` ADD INDEX ( `fld_send_to_id` ) 
+ALTER TABLE `tbl_open_purchase_order_details` ADD INDEX ( `fld_material_name` ) 
+ALTER TABLE `tbl_organization_master` ADD INDEX ( `fld_org_name` ) 
+ALTER TABLE `tbl_organization_master` ADD INDEX ( `fld_org_address` ) 
+ALTER TABLE `tbl_proforma_invoice_details` ADD INDEX ( `fld_material_name` ) 
+ALTER TABLE `tbl_purchase_bill_details` ADD INDEX ( `fld_raw_material_inward_id` ) 
+ALTER TABLE `tbl_purchase_bill_tax_details` ADD INDEX ( `fld_amount` ) 
+ALTER TABLE `tbl_purchase_order_details` ADD INDEX ( `fld_rawmaterial_id` ) 
+ALTER TABLE `tbl_qr_master` ADD INDEX ( `fld_client_id` ) 
+ALTER TABLE `tbl_qr_master` ADD INDEX ( `fld_vehicle_id` ) 
+ALTER TABLE `tbl_qr_master` ADD INDEX ( `fld_qr_code` ) 
+ALTER TABLE `tbl_rack_master` ADD INDEX ( `fld_material_type` ) 
+ALTER TABLE `tbl_rack_master` ADD INDEX ( `fld_rack_name` )
+ALTER TABLE `tbl_rawmaterial_category_master` ADD INDEX ( `fld_sub_cat_id` )  
+ALTER TABLE `tbl_material_type_master` ADD INDEX ( `fld_material_type` ) 
+ALTER TABLE `tbl_item_master` ADD INDEX ( `fld_type` ) 
+ALTER TABLE `tbl_item_master` ADD INDEX ( `fld_category` ) 
+ALTER TABLE `tbl_item_master` ADD INDEX ( `fld_color_code` ) 
+ALTER TABLE `tbl_rawmaterial_receive_testing_master` ADD INDEX ( `fld_inward_id` ) 
+ALTER TABLE `tbl_rawmaterial_receive_testing_master` ADD INDEX ( `fld_material_id` ) 
+ALTER TABLE `tbl_rawmaterial_requisition_details` ADD INDEX ( `fld_rawmaterial_id` ) 
+ALTER TABLE `tbl_rawmaterial_return_details` ADD INDEX ( `fld_material_name` ) 
+ALTER TABLE `tbl_rawmaterial_unit_master` ADD INDEX ( `fld_unit` ) 
+ALTER TABLE `tbl_raw_sub_cat_master` ADD INDEX ( `fld_sub_cat_name` ) 
+ALTER TABLE `tbl_reminder_master` ADD INDEX ( `fld_reminder` ) 
+ALTER TABLE `tbl_role_master` ADD INDEX ( `fld_role_name` ) 
+ALTER TABLE `tbl_reward_master` ADD INDEX ( `fld_invoice_id` ) 
+ALTER TABLE `tbl_section_master` ADD INDEX ( `fld_material_type` ) 
+ALTER TABLE `tbl_section_master` ADD INDEX ( `fld_code` ) 
+ALTER TABLE `tbl_shift_master` ADD INDEX ( `fld_shift` ) 
+ALTER TABLE `tbl_vehicle_master` ADD INDEX ( `fld_cust_id` ) 
+ALTER TABLE `tbl_vendor_contact_person_details` ADD INDEX ( `fld_vendor_id` ) 
+ALTER TABLE `tbl_vendor_credit_note` ADD INDEX ( `fld_vendor_credit_note_date` ) 
+ALTER TABLE `tbl_vendor_payment_detail` ADD INDEX ( `fld_org_id` ) 
+
+//Date : 04/10/2019 by Juned
+ALTER TABLE `tbl_template_master` ADD `fld_template_name` VARCHAR( 25 ) NOT NULL AFTER `fld_template_type` 
+ALTER TABLE `tbl_template_master` CHANGE `fld_template` `fld_template_desc` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL 
+
+Date : 20-10-2019 Juned
+ALTER TABLE `tbl_organization_master` ADD `fld_map_address` TEXT NOT NULL AFTER `fld_logo` 
+
+Date : 21-10-2019 Juned
+ALTER TABLE `tbl_software_parameter` ADD `fld_time_for_timepicker` TIME NOT NULL AFTER `fld_credit_period_for_invoice` 

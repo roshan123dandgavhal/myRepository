@@ -1,0 +1,1 @@
+<a href="print://gauravpetro?text=test">Click here</a>

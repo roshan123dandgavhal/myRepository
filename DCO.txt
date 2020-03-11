@@ -1,0 +1,28 @@
+Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(1)	The contribution was created in whole or in part by me and I
+	have the right to submit it under the open source license
+	indicated in the file; or
+
+(2)	The contribution is based upon previous work that, to the best
+	of my knowledge, is covered under an appropriate open source
+	license and I have the right under that license to submit that
+	work with modifications, whether created in whole or in part
+	by me, under the same open source license (unless I am
+	permitted to submit under a different license), as indicated
+	in the file; or
+
+(3)	The contribution was provided directly to me by some other
+	person who certified (1), (2) or (3) and I have not modified
+	it.
+
+(4)	I understand and agree that this project and the contribution
+	are public and that a record of the contribution (including all
+	personal information I submit with it, including my sign-off) is
+	maintained indefinitely and may be redistributed consistent with
+	this project or the open source license(s) involved.
+
+
+SELECT fom.fld_order_id,ffm.fld_order_id,fom.fld_vehicle_no,fld_driver_name FROM `tbl_client_fuel_order` AS fom LEFT JOIN tbl_client_fuel_filling_master AS ffm ON fom.fld_order_id = ffm.fld_order_id AND ffm.fld_isdeleted !='1' WHERE fom.fld_isdeleted !='1' AND ffm.fld_order_id IS NULL 
